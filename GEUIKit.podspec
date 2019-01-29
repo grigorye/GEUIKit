@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "GEUIKit"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.summary = "UIKit related extensions"
 
   s.description  = <<~END
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
   # s.tvos.deployment_target = "9.0"
 
   s.source = { :git => "https://github.com/grigorye/GEUIKit.git", :tag => "#{s.version}" }
-  
+  s.resource_bundle = { 'GEUIKit-Sources' => 'GEUIKit' }
+
   s.swift_version = "4.0"
 
   s.source_files  = "GEUIKit/*.swift"
