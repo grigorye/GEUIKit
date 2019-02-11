@@ -115,6 +115,8 @@ public class TableViewFetchedResultsControllerDelegate<T: NSManagedObject>: NSOb
 		case .move:
 			tableView.deleteRows(at: [x$(indexPath!)], with: rowAnimation)
 			tableView.insertRows(at: [x$(newIndexPath!)], with: rowAnimation)
+		default:
+			fatalError()
 		}
 	}
 	public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

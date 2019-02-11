@@ -16,11 +16,10 @@ struct TargetSizeAndLayoutSizeDefiningValue {
 	let layoutSizeDefiningValue: NSObject
 }
 
+
 extension TargetSizeAndLayoutSizeDefiningValue : Hashable, Equatable {
-	var hashValue: Int {
-		return "\(targetSize)".hash &+ layoutSizeDefiningValue.hashValue
-	}
 }
+
 func == (lhs: TargetSizeAndLayoutSizeDefiningValue, rhs: TargetSizeAndLayoutSizeDefiningValue) -> Bool {
 	guard lhs.targetSize == rhs.targetSize else {
 		return false

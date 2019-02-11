@@ -54,7 +54,7 @@ public struct TableViewHeightBasedReusedCellGenerator<DataSource: TableViewHeigh
 			return heightAgnosticCellReuseIdentifier
 		}
 		
-		let indexInReusedHeights = reusedHeights.index(of: height)!
+		let indexInReusedHeights = reusedHeights.firstIndex(of: height)!
 		guard indexInReusedHeights < reuseIdentifiersForHeightCachingCells.count else {
 			return heightAgnosticCellReuseIdentifier
 		}
